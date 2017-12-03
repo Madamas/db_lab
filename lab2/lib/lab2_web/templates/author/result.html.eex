@@ -1,0 +1,32 @@
+<h2>Listing Authors</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Birth</th>
+      <th>Name</th>
+      <th>Surname</th>
+      <th>Rating</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for author <- @authors do %>
+    <tr>
+      <td><%= author.birth %></td>
+      <td><%= author.name %></td>
+      <td><%= author.surname %></td>
+      <td><%= author.rating %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: author_path(@conn, :show, author), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: author_path(@conn, :edit, author), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: author_path(@conn, :delete, author), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "Back", to: author_path(@conn, :index) %></span>

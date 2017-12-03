@@ -1,0 +1,5 @@
+<h2>Edit Genre</h2>
+
+<%= render "form.html", Map.put(assigns, :action, genre_path(@conn, :update, @genre)) %>
+
+<span><%= link "Back", to: genre_path(@conn, :index) %></span>

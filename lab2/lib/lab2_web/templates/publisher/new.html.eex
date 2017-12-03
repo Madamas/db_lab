@@ -1,0 +1,5 @@
+<h2>New Publisher</h2>
+
+<%= render "form.html", Map.put(assigns, :action, publisher_path(@conn, :create)) %>
+
+<span><%= link "Back", to: publisher_path(@conn, :index) %></span>

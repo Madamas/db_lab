@@ -1,0 +1,33 @@
+<h2>Show Author</h2>
+
+<ul>
+
+  <li>
+    <strong>Birth:</strong>
+    <%= @author.birth %>
+  </li>
+
+  <li>
+    <strong>Birth:</strong>
+    <%= @author.birth %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @author.name %>
+  </li>
+
+  <li>
+    <strong>Rating:</strong>
+    <%= @author.rating %>
+  </li>
+
+  <li>
+    <strong>Surname:</strong>
+    <%= @author.surname %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: author_path(@conn, :edit, @author) %></span>
+<span><%= link "Back", to: author_path(@conn, :index) %></span>

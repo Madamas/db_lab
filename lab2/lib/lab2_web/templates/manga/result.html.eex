@@ -1,0 +1,32 @@
+<h2>Search Result</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Author</th>
+      <th>Genre</th>
+      <th>Publisher</th>
+      <th>Score</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for manga <- @mangas do %>
+    <tr>
+      <td><%= Lab2.Authors.get_author!(manga.author_id).name<>" "<>Lab2.Authors.get_author!(manga.author_id).surname %></td>
+      <td><%= Lab2.Genres.get_genre!(manga.genre_id).name %></td>
+      <td><%= Lab2.Publishers.get_publisher!(manga.publisher_id).name %></td>
+      <td><%= manga.score %></td>
+
+      <td class="text-right">
+        <span><%= link "Show", to: manga_path(@conn, :show, manga), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: manga_path(@conn, :edit, manga), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: manga_path(@conn, :delete, manga), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>
+<% end %>
+  </tbody>
+</table>
+
+<span><%= link "Back", to: manga_path(@conn, :index) %></span>
