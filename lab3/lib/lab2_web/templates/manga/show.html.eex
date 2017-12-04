@@ -1,0 +1,28 @@
+<h2>Show Manga</h2>
+
+<ul>
+
+  <li>
+    <strong>Author:</strong>
+    <%= @manga.author_id %>
+  </li>
+
+  <li>
+    <strong>Genre:</strong>
+    <%= @manga.genre_id %>
+  </li>
+
+  <li>
+    <strong>Publisher:</strong>
+    <%= @manga.publisher_id %>
+  </li>
+
+  <li>
+    <strong>Score:</strong>
+    <%= @manga.score %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: manga_path(@conn, :edit, @manga) %></span>
+<span><%= link "Back", to: manga_path(@conn, :index) %></span>

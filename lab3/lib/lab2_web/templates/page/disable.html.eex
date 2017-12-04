@@ -1,0 +1,1 @@
+<%= button("Disable Trigger", to: "/dis", method: "post", class: "btn") %>

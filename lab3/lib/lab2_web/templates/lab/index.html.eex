@@ -1,0 +1,18 @@
+<div class="jumbotron">
+	<div class="dropdown">
+		<span>Dropdown List </span>
+		<div id="ch_form" class="table_form">
+			<select id="choose" class="table_sel">
+				<option value="authors">Authors</option>
+				<option value="genres">Genres</option>
+				<option value="mangas">Mangas</option>
+				<option value="publishers">Publishers</option>
+			</select>
+			<input id="submit" type="submit" value="submit">
+			<%= form_for @changeset, user_path(@conn, :create), fn f -> %>
+			<%= select(f, :ch_form, ["Authors": "authors","Genres": "genres","Mangas": "mangas", "Publishers": "publishers"]) %>
+			<%= submit("Submit",[id: "submit",type: "submit", value: "submit"]) %>
+			<% end %>
+		</div>
+	</div>
+</div>

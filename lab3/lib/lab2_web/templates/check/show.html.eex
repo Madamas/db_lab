@@ -1,0 +1,23 @@
+<h2>Show Check</h2>
+
+<ul>
+
+  <li>
+    <strong>Manga:</strong>
+    <%= @check.manga_id %>
+  </li>
+
+  <li>
+    <strong>Insert date:</strong>
+    <%= @check.insert_date %>
+  </li>
+
+  <li>
+    <strong>Insert time:</strong>
+    <%= @check.insert_time %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: check_path(@conn, :edit, @check) %></span>
+<span><%= link "Back", to: check_path(@conn, :index) %></span>

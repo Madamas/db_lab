@@ -1,0 +1,11 @@
+<div class="jumbotron">
+  <a href="/authors"> To Authors! </a><br>
+  <a href="/genres"> To Genres! </a><br>
+  <a href="/publishers"> To Publishers! </a><br>
+  <a href="/mangas"> To Mangas! </a><br>
+  <a href="/checks"> To Checks! </a><br>
+</div>
+<span><%= render "enable.html", Map.put(assigns, :action, page_path(@conn, :trigger_en))%></span>
+<span><%= render "disable.html", Map.put(assigns, :action, page_path(@conn, :trigger_dis))%></span>
+
+

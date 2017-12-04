@@ -1,0 +1,3 @@
+<div class="jumbotron">
+	<h2>Hi <%= @context %></h2>
+</div>

@@ -1,0 +1,28 @@
+<h2>Listing Checks</h2>
+
+<table class="table">
+  <thead>
+    <tr>
+      <th>Manga</th>
+      <th>Insert date</th>
+      <th>Insert time</th>
+
+      <th></th>
+    </tr>
+  </thead>
+  <tbody>
+<%= for check <- @checks do %>
+    <tr>
+      <td><%= check.manga_id %></td>
+      <td><%= check.insert_date %></td>
+      <td><%= check.insert_time %></td>
+
+      <!--<td class="text-right">
+        <span><%= link "Show", to: check_path(@conn, :show, check), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Edit", to: check_path(@conn, :edit, check), class: "btn btn-default btn-xs" %></span>
+        <span><%= link "Delete", to: check_path(@conn, :delete, check), method: :delete, data: [confirm: "Are you sure?"], class: "btn btn-danger btn-xs" %></span>
+      </td>
+    </tr>-->
+<% end %>
+  </tbody>
+</table>

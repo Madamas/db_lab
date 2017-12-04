@@ -1,0 +1,28 @@
+<h2>Show Publisher</h2>
+
+<ul>
+
+  <li>
+    <strong>City:</strong>
+    <%= @publisher.city %>
+  </li>
+
+  <li>
+    <strong>Country:</strong>
+    <%= @publisher.country %>
+  </li>
+
+  <li>
+    <strong>Name:</strong>
+    <%= @publisher.name %>
+  </li>
+
+  <li>
+    <strong>Rating:</strong>
+    <%= @publisher.rating %>
+  </li>
+
+</ul>
+
+<span><%= link "Edit", to: publisher_path(@conn, :edit, @publisher) %></span>
+<span><%= link "Back", to: publisher_path(@conn, :index) %></span>

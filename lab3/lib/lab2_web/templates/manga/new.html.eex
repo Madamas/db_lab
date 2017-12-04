@@ -1,0 +1,5 @@
+<h2>New Manga</h2>
+
+<%= render "form.html", Map.put(assigns, :action, manga_path(@conn, :create))%>
+
+<span><%= link "Back", to: manga_path(@conn, :index) %></span>

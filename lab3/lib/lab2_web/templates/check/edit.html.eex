@@ -1,0 +1,5 @@
+<h2>Edit Check</h2>
+
+<%= render "form.html", Map.put(assigns, :action, check_path(@conn, :update, @check)) %>
+
+<span><%= link "Back", to: check_path(@conn, :index) %></span>
