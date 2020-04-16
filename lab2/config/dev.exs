@@ -51,8 +51,8 @@ config :phoenix, :stacktrace_depth, 20
 # Configure your database
 config :lab2, Lab2.Repo,
   adapter: Ecto.Adapters.Postgres,
-  username: "postgres",
-  password: "postgres",
+  username: "kekbung",
+  password: "Brovary2017",
   database: "lab2_dev",
   hostname: "localhost",
   pool_size: 10
